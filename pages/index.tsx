@@ -10,7 +10,6 @@ export function getServerSideProps(context: NextPageContext) {
   if (!content.hasOwnProperty(locale)) {
     locale = Object.keys(content)[0];
   }
-  console.log(locale);
   return {
     props: {
       content: content[locale] || content.en,
@@ -23,11 +22,17 @@ interface HomeProps {
 }
 
 const Home = ({ content }: HomeProps): any => {
-  console.log(content);
   return (
     <>
-      <Navbar content={content.navbar} />
-      <Bio />
+      <div className="h-full w-full">
+        <Navbar content={content.navbar} />
+        <Bio />
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam voluptatibus, sunt velit
+          mollitia est nostrum esse omnis in minima, fugiat nam fuga dolorum adipisci? Officiis
+          laborum quo mollitia nihil natus.
+        </div>
+      </div>
     </>
   );
 };

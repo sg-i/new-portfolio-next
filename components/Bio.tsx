@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ProfilePicture from './ProfilePicture';
 
 const socials = [
   {
@@ -14,16 +15,18 @@ const socials = [
     alt: 'github link',
   },
 ];
-
+const techStack = [];
 export default function Bio() {
   return (
-    <div className="justify-center min-h-screen flex flex-col ">
-      <div className="flex flex-col items-center w-[70%] m-auto">
+    <div className="justify-center pt-14 flex flex-col  h-full">
+      <div className="flex flex-col items-center  m-auto">
         <div className="flex gap-14 items-center">
           <div className="flex flex-col w-[380px] gap-4">
-            <div className="text-5xl">Frontend React Dev</div>
-            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-            <div>
+            <div className="text-5xl font-bold">Frontend React Developer</div>
+            <div className="text-gray-500">
+              Hello! I'm Ivan Sgadov, a responsible and hardworking frontend developer.
+            </div>
+            <div className="pt-2">
               <ul className="flex items-center gap-3">
                 {socials.map((social) => (
                   <li key={social.id}>
@@ -40,17 +43,52 @@ export default function Bio() {
               </ul>
             </div>
           </div>
-          <div className="overflow-hidden h-64 w-64">
-            <Image width={300} height={100} src="/profile-picture.jpg" alt="profile picture" />
-          </div>
+          <ProfilePicture />
         </div>
-        <div className="flex  justify-between">
-          <div>Tech Stack</div>
-          <ul className="flex">
-            <li>Html</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>React</li>
+        <div className="flex pt-10 w-full gap-4 items-center">
+          <div className="font-bold">Tech Stack</div>
+          <div className="text-slate-400">|</div>
+          <ul className="flex gap-6 h-16 items-center">
+            <li className="flex h-full flex-col justify-between items-center">
+              <div className="flex  h-full">
+                <img
+                  className="animate-spin-slow"
+                  width={40}
+                  height={40}
+                  src={'/icons/tech-stack/react-icon.svg'}
+                  alt="react icon"
+                />
+              </div>
+              <div>React</div>
+            </li>
+            <li className="flex h-full flex-col justify-between items-center">
+              <div className="flex  h-full">
+                <img width={35} height={35} src={'/icons/tech-stack/vue.svg'} alt="react icon" />
+              </div>
+              <div>Vue</div>
+            </li>
+            <li className="flex h-full flex-col justify-between items-center">
+              <div className="flex  h-full">
+                <img
+                  width={40}
+                  height={40}
+                  src={'/icons/tech-stack/tailwind.svg'}
+                  alt="react icon"
+                />
+              </div>
+              <div>Tailwind</div>
+            </li>
+            <li className="flex h-full flex-col justify-between items-center">
+              <div className="flex  h-full">
+                <img
+                  width={34}
+                  height={34}
+                  src={'/icons/tech-stack/next-js.svg'}
+                  alt="react icon"
+                />
+              </div>
+              <div>Next</div>
+            </li>
           </ul>
         </div>
       </div>
