@@ -10,9 +10,7 @@
   }
   .mask{
     object-fit: cover;
-    // clip-path: path('M5.5 87.5C26.4999 1.00001 166 -22.5 289.5 25.5C413 73.5 298 332.689 169.5 343.5C40.9999 354.311 -15.4999 174 5.5 87.5Z');
-
-    animation: border-radius-animation 10s infinite alternate;
+    animation: border-radius-animation 12s infinite alternate;
   }
 }
 

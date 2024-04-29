@@ -4,6 +4,8 @@ import Bio from '@/components/Bio';
 import Navbar from '@/components/Navbar';
 import { content } from '@/libs/localisedContent';
 import { contentInterface, localisedContentInterface } from '@/types';
+import { PortfolioElement } from '@/components/Portfolio/PortfolioElement';
+import { Portfolio } from '@/components/Portfolio';
 
 export function getServerSideProps(context: NextPageContext) {
   let locale = context.locale || 'en';
@@ -27,11 +29,7 @@ const Home = ({ content }: HomeProps): any => {
       <div className="h-full w-full">
         <Navbar content={content.navbar} />
         <Bio />
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam voluptatibus, sunt velit
-          mollitia est nostrum esse omnis in minima, fugiat nam fuga dolorum adipisci? Officiis
-          laborum quo mollitia nihil natus.
-        </div>
+        <Portfolio />
       </div>
     </>
   );

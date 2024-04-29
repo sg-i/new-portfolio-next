@@ -20,10 +20,10 @@ export default function Bio() {
   return (
     <div className="justify-center pt-14 flex flex-col  h-full">
       <div className="flex flex-col items-center  m-auto">
-        <div className="flex gap-14 items-center">
+        <div className="flex gap-14  items-center">
           <div className="flex flex-col w-[380px] gap-4">
             <div className="text-5xl font-bold">Frontend React Developer</div>
-            <div className="text-gray-500">
+            <div className="text-gray-500 ">
               Hello! I'm Ivan Sgadov, a responsible and hardworking frontend developer.
             </div>
             <div className="pt-2">
