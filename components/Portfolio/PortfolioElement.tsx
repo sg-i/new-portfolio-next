@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 interface PortfolioElementProps {
@@ -9,22 +10,13 @@ interface PortfolioElementProps {
   codeLink: string;
   demoLink: string;
   leftImage: boolean;
+  images: [
+    {
+      original: string;
+      thumbnail: string;
+    },
+  ];
 }
-
-const images = [
-  {
-    original: '/portfolio/netflix/1.png',
-    thumbnail: '/portfolio/netflix/1.png',
-  },
-  {
-    original: '/portfolio/netflix/1.png',
-    thumbnail: '/portfolio/netflix/1.png',
-  },
-  {
-    original: '/portfolio/netflix/1.png',
-    thumbnail: '/portfolio/netflix/1.png',
-  },
-];
 
 export const PortfolioElement = ({
   title,
@@ -33,11 +25,30 @@ export const PortfolioElement = ({
   codeLink,
   demoLink,
   leftImage,
+  images,
 }: PortfolioElementProps) => {
+  const FullScreenOverCallback = () => {
+    const scroll = window.scrollY;
+    if (scroll != 0) {
+      localStorage.setItem('scrollPosition', scroll.toString());
+    }
+  };
+  const FullScreenChangedCallback = () => {
+    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+    }
+  };
+
   return (
     <div className={`flex gap-5 items-center ${leftImage && 'flex-row-reverse'}`}>
-      <div className="w-3/5   overflow-hidden">
-        <ImageGallery showFullscreenButton={false} showPlayButton={false} items={images} />
+      <div onMouseMove={FullScreenOverCallback} className="w-3/5   overflow-hidden">
+        <ImageGallery
+          onScreenChange={FullScreenChangedCallback}
+          showFullscreenButton={true}
+          showPlayButton={false}
+          items={images}
+        />
         {/* <Image
           className="w-full"
           width={1920}

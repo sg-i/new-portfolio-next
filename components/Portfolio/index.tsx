@@ -1,5 +1,6 @@
 import React from 'react';
 import { PortfolioElement } from './PortfolioElement';
+import { SectionTitle } from '../SectionTitle';
 
 const projects = [
   {
@@ -9,6 +10,20 @@ const projects = [
     stack: ['React', 'Next', 'SCSS'],
     codeLink: 'https://github.com/sg-i',
     demoLink: 'https://github.com/sg-i',
+    images: [
+      {
+        original: '/portfolio/netflix/1.png',
+        thumbnail: '/portfolio/netflix/1.png',
+      },
+      {
+        original: '/portfolio/netflix/2.png',
+        thumbnail: '/portfolio/netflix/2.png',
+      },
+      {
+        original: '/portfolio/netflix/3.png',
+        thumbnail: '/portfolio/netflix/3.png',
+      },
+    ],
   },
   {
     title: '1Netflix Clone • Online Сinema 🎬',
@@ -17,6 +32,24 @@ const projects = [
     stack: ['React'],
     codeLink: 'https://github.com/sg-i',
     demoLink: 'https://github.com/sg-i',
+    images: [
+      {
+        original: '/portfolio/spotify/1.png',
+        thumbnail: '/portfolio/spotify/1.png',
+      },
+      {
+        original: '/portfolio/spotify/2.png',
+        thumbnail: '/portfolio/spotify/2.png',
+      },
+      {
+        original: '/portfolio/spotify/3.png',
+        thumbnail: '/portfolio/spotify/3.png',
+      },
+      {
+        original: '/portfolio/spotify/4.png',
+        thumbnail: '/portfolio/spotify/4.png',
+      },
+    ],
   },
   {
     title: '2Netflix Clone • Online Сinema 🎬',
@@ -25,19 +58,29 @@ const projects = [
     stack: ['React', 'Next', 'SCSS'],
     codeLink: 'https://github.com/sg-i',
     demoLink: 'https://github.com/sg-i',
+    images: [
+      {
+        original: '/portfolio/netflix/1.png',
+        thumbnail: '/portfolio/netflix/1.png',
+      },
+      {
+        original: '/portfolio/netflix/2.png',
+        thumbnail: '/portfolio/netflix/2.png',
+      },
+      {
+        original: '/portfolio/netflix/3.png',
+        thumbnail: '/portfolio/netflix/3.png',
+      },
+    ],
   },
 ];
 
 export const Portfolio = () => {
   return (
     <div className="flex flex-col items-center w-3/5 m-auto gap-16">
-      <div className="w-full">
-        <div className="font-bold text-md text-blue-500">PORTFOLIO</div>
-        <div className="font-bold text-2xl flex gap-2 items-center">
-          <div>My Works: Creativity and Code in Action</div>{' '}
-          <div className="animate-bounce text-2xl">🧩</div>
-        </div>
-      </div>
+      <SectionTitle title={'PORTFOLIO'} description={'My Works: Creativity and Code in Action'}>
+        <div className="animate-bounce text-2xl">🧩</div>
+      </SectionTitle>
       <div className="flex flex-col items-center  m-auto gap-24">
         {projects.map((el, index) => (
           <PortfolioElement
@@ -47,6 +90,7 @@ export const Portfolio = () => {
             stack={el.stack}
             codeLink={el.codeLink}
             demoLink={el.demoLink}
+            images={el.images}
             leftImage={index % 2 == 1}
           />
         ))}
