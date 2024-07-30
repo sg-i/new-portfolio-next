@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 interface PortfolioElementProps {
+  codeButton: string;
   title: string;
+  liveDemoButton: string;
   description: string;
   stack: Array<string>;
   codeLink: string;
@@ -20,6 +22,8 @@ interface PortfolioElementProps {
 
 export const PortfolioElement = ({
   title,
+  codeButton,
+  liveDemoButton,
   description,
   stack,
   codeLink,
@@ -75,7 +79,7 @@ export const PortfolioElement = ({
             className="p-2 shadow-md rounded-lg bg-white hover:bg-zinc-50"
             href={codeLink}>
             <div className="flex gap-1 items-center">
-              <div>Code</div>
+              <div>{codeButton}</div>
               <Image
                 width={25}
                 height={25}
@@ -89,7 +93,7 @@ export const PortfolioElement = ({
             className="p-2 shadow-md rounded-lg bg-white hover:bg-zinc-50"
             href={demoLink}>
             <div className="flex gap-1 items-center">
-              <div>Live Demo</div>
+              <div>{liveDemoButton}</div>
               <Image width={27} height={27} src={'/icons/socials/link.svg'} alt={'github link'} />
             </div>
           </Link>

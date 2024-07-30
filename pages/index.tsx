@@ -9,9 +9,10 @@ import { Portfolio } from '@/components/Portfolio';
 import { About } from '@/components/About';
 
 export function getServerSideProps(context: NextPageContext) {
-  let locale = context.locale || 'en';
+  let locale: keyof localisedContentInterface =
+    (context.locale as keyof localisedContentInterface) || 'en';
   if (!content.hasOwnProperty(locale)) {
-    locale = Object.keys(content)[0];
+    locale = Object.keys(content)[0] as keyof localisedContentInterface;
   }
   return {
     props: {
@@ -29,9 +30,13 @@ const Home = ({ content }: HomeProps): any => {
     <>
       <div className="h-full w-full">
         <Navbar content={content.navbar} />
-        <Bio />
-        <About />
-        <Portfolio />
+        <Bio content={content.bio} />
+        <About section={content.navbar.about} content={content.about} />
+        <Portfolio
+          section={content.navbar.projects}
+          content={content.portfolio}
+          projects={content.projects}
+        />
       </div>
     </>
   );

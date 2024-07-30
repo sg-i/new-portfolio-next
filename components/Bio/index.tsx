@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import ProfilePicture from './ProfilePicture';
+import { contentBioInterface } from '@/types';
+interface BioProps {
+  content: contentBioInterface;
+}
 
 const socials = [
   {
@@ -16,16 +20,14 @@ const socials = [
   },
 ];
 const techStack = [];
-export default function Bio() {
+export default function Bio({ content }: BioProps) {
   return (
-    <div className="justify-center pt-14 flex flex-col  h-full">
+    <div id="bioSection" className="justify-center pt-14 flex flex-col  h-full">
       <div className="flex flex-col items-center  m-auto">
         <div className="flex gap-14  items-center">
           <div className="flex flex-col w-[380px] gap-4">
-            <div className="text-5xl font-bold">Frontend React Developer</div>
-            <div className="text-gray-500 ">
-              Hello! I'm Ivan Sgadov, a responsible and hardworking frontend developer.
-            </div>
+            <div className="text-5xl font-bold">{content.title}</div>
+            <div className="text-gray-500 ">{content.description}</div>
             <div className="pt-2">
               <ul className="flex items-center gap-3">
                 {socials.map((social) => (
@@ -46,7 +48,7 @@ export default function Bio() {
           <ProfilePicture />
         </div>
         <div className="flex pt-10 w-full gap-4 items-center">
-          <div className="font-bold">Tech Stack</div>
+          <div className="font-bold">{content.techStack}</div>
           <div className="text-slate-400">|</div>
           <ul className="flex gap-6 h-16 items-center">
             <li className="flex h-full flex-col justify-between items-center">
