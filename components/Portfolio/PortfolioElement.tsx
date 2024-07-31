@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
@@ -61,16 +62,17 @@ export const PortfolioElement = ({
           alt="netflix demo"
         /> */}
       </div>
-      <div className="w-2/5  text-center h-80 justify-between flex flex-col">
+      <div className="w-2/5  text-center gap-3 justify-between flex flex-col">
         <div>
           <div className="text-2xl font-medium mb-3">{title}</div>
           <div className="text-gray-500 font-medium">{description}</div>
         </div>
-        <div className="flex gap-2 justify-center">
-          {stack.map((el) => (
-            <div className="font-semibold" key={el}>
-              {el}
-            </div>
+        <div className="flex gap-1 justify-center">
+          {stack.map((el, index) => (
+            <React.Fragment key={el}>
+              <div className="font-semibold">{el}</div>
+              {index < stack.length - 1 && <span className="font-semibold">•</span>}
+            </React.Fragment>
           ))}
         </div>
         <div className="flex justify-center  font-semibold gap-10 text-lg">

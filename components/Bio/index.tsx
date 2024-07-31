@@ -19,17 +19,18 @@ const socials = [
     alt: 'github link',
   },
 ];
-const techStack = [];
 export default function Bio({ content }: BioProps) {
   return (
-    <div id="bioSection" className="justify-center pt-14 flex flex-col  h-full">
-      <div className="flex flex-col items-center  m-auto">
-        <div className="flex gap-14  items-center">
-          <div className="flex flex-col w-[380px] gap-4">
-            <div className="text-5xl font-bold">{content.title}</div>
-            <div className="text-gray-500 ">{content.description}</div>
-            <div className="pt-2">
-              <ul className="flex items-center gap-3">
+    <div id="bioSection" className="justify-center  pt-10 md:pt-14 flex flex-col  w-full h-[100vh]">
+      <div className="flex flex-col  items-center m-auto">
+        {/* <div className="flex flex-col gap-14 md:flex-row items-center"> */}
+        <div className="gap-0 md:gap-2 lg:gap-14 flex flex-wrap-reverse md:flex-nowrap justify-center items-center">
+          {/* <div className="flex flex-col w-[480px] gap-4"> */}
+          <div className="flex flex-col w-[330px] sm:w-[500px] md:w-[370px] lg:w-[460px]  text-center md:text-left gap-4">
+            <div className="text-3xl sm:text-5xl font-bold">{content.title}</div>
+            <div className="text-base sm:text-base text-gray-500 ">{content.description}</div>
+            <div className="sm:pt-2">
+              <ul className="flex items-center justify-center md:justify-normal gap-3">
                 {socials.map((social) => (
                   <li key={social.id}>
                     <a href="https://github.com/sg-i" target="_blank" rel="noopener noreferrer">
@@ -47,9 +48,9 @@ export default function Bio({ content }: BioProps) {
           </div>
           <ProfilePicture />
         </div>
-        <div className="flex pt-10 w-full gap-4 items-center">
-          <div className="font-bold">{content.techStack}</div>
-          <div className="text-slate-400">|</div>
+        <div className="flex pt-4 sm:pt-10 w-full gap-1 sm:gap-4  justify-center md:justify-normal flex-col sm:flex-row  items-center">
+          <div className="hidden sm:block font-bold">{content.techStack}</div>
+          <div className="hidden sm:block text-slate-400">|</div>
           <ul className="flex gap-6 h-16 items-center">
             <li className="flex h-full flex-col justify-between items-center">
               <div className="flex  h-full">
@@ -92,6 +93,7 @@ export default function Bio({ content }: BioProps) {
               <div>Next</div>
             </li>
           </ul>
+          {/* <div className="visible sm:hidden font-bold">{content.techStack}</div> */}
         </div>
       </div>
     </div>

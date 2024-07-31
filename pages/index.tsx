@@ -28,10 +28,13 @@ interface HomeProps {
 const Home = ({ content }: HomeProps): any => {
   return (
     <>
-      <div className="h-full w-full">
+      <div className="h-full w-full items-center ">
         <Navbar content={content.navbar} />
         <Bio content={content.bio} />
-        <About section={content.navbar.about} content={content.about} />
+        <div className="p-4 sm:p-8  lg:w-[950px] xl:w-[1100px] m-auto">
+          <About section={content.navbar.about} content={content.about} />
+        </div>
+
         <Portfolio
           section={content.navbar.projects}
           content={content.portfolio}

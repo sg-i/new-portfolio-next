@@ -36,7 +36,7 @@ export const content: localisedContentInterface = {
         },
         projects:[
             {
-              title: 'Netflix Clone • Online Сinema 🎬',
+              title: 'Netflix Clone - Online Сinema',
               description:
                 'A Full Stack app developed using React, Next.js, Tailwind, and SCSS, with MongoDB for data storage. The main features include online movie streaming, easy navigation, and content search. Authorized users can add movies to their favorites.',
                 stack: ['React', 'Next', 'Tailwind','SCSS', 'Typescript','MongoDB'],
@@ -58,10 +58,10 @@ export const content: localisedContentInterface = {
               ],
             },
             {
-              title: '1Netflix Clone • Online Сinema 🎬',
+              title: 'Spotify Layout - Music Player',
               description:
-                'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sint dolorum molestias reprehenderit perferendis unde illo consequuntur et amet! Fugit, laboriosam earum! Vel quam dolores voluptate tempora pariatur, sit maxime.',
-              stack: ['React'],
+                'This project is a clone of the music streaming service Spotify, created for practicing layout and interface development. The application is built using Vue and Pinia for state management. A music player for playback has been implemented.',
+              stack: ['Vue', 'Pinia', 'Tailwind','TypeScript' ],
               codeLink: 'https://github.com/sg-i',
               demoLink: 'https://github.com/sg-i',
               images: [
@@ -84,7 +84,7 @@ export const content: localisedContentInterface = {
               ],
             },
             {
-              title: '2Netflix Clone • Online Сinema 🎬',
+              title: '2Netflix Clone - Online Сinema 🎬',
               description:
                 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sint dolorum molestias reprehenderit perferendis unde illo consequuntur et amet! Fugit, laboriosam earum! Vel quam dolores voluptate tempora pariatur, sit maxime.',
               stack: ['React', 'Next', 'SCSS'],
@@ -143,10 +143,10 @@ export const content: localisedContentInterface = {
         },
         projects:[
             {
-              title: 'Клон Netflix • Онлайн Кинотеатр',
+              title: 'Клон Netflix - Онлайн Кинотеатр',
               description:
                 'Full Stack приложение разработанное с использованием React, Next.js, Tailwind и SCSS, а также MongoDB для хранения данных. Основные функции включают просмотр фильмов онлайн, удобную навигацию и поиск контента. Авторизованные пользователи могут добавлять фильмы в избранное.',
-              stack: ['React', 'Next', 'Tailwind','SCSS', 'Typescript','MongoDB'],
+              stack: ['React', 'Next', 'Tailwind','SCSS', 'TypeScript','MongoDB'],
               codeLink: 'https://github.com/sg-i/netflix-next',
               demoLink: 'https://netflix-next-sg-i.vercel.app/',
               images: [
@@ -165,12 +165,12 @@ export const content: localisedContentInterface = {
               ],
             },
             {
-              title: '1Netflix Clone • Online Сinema 🎬',
+              title: 'Вёрстка Spotify - Музыкальный Плеер',
               description:
-                'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sint dolorum molestias reprehenderit perferendis unde illo consequuntur et amet! Fugit, laboriosam earum! Vel quam dolores voluptate tempora pariatur, sit maxime.',
-              stack: ['React'],
+                'Этот проект представляет собой клон музыкального стримингового сервиса Spotify, созданный для практики вёрстки и разработки интерфейсов. Приложение написано с использованием Vue и Pinia для управления состоянием. Также реализован плеер для воспроизведения музыки.',
+              stack: ['Vue', 'Pinia', 'TypeScript' ],
               codeLink: 'https://github.com/sg-i',
-              demoLink: 'https://github.com/sg-i',
+              demoLink: 'https://github.com/sg-i/spotify-vue',
               images: [
                 {
                   original: '/portfolio/spotify/1.png',
@@ -191,7 +191,7 @@ export const content: localisedContentInterface = {
               ],
             },
             {
-              title: '2Netflix Clone • Online Сinema 🎬',
+              title: '2Netflix Clone - Online Сinema 🎬',
               description:
                 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sint dolorum molestias reprehenderit perferendis unde illo consequuntur et amet! Fugit, laboriosam earum! Vel quam dolores voluptate tempora pariatur, sit maxime.',
               stack: ['React', 'Next', 'SCSS'],

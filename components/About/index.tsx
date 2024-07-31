@@ -1,5 +1,5 @@
 import { contentAboutInterface, contentNavbarInterface } from '@/types';
-import { CornerBordersDiv } from '../CornerBordersDiv/indes';
+import { CornerBordersDiv } from '../CornerBordersDiv';
 import { SectionTitle } from '../SectionTitle';
 import { AboutElement } from './AboutElement';
 import Image from 'next/image';
@@ -9,25 +9,28 @@ interface AboutProps {
 }
 export const About = ({ section, content }: AboutProps) => {
   return (
-    <div id="aboutSection" className="flex flex-col items-center w-3/5 m-auto gap-6 mb-14">
+    <div
+      id="aboutSection"
+      // className="flex flex-col items-center w-full xl:w-3/5 m-auto gap-6 mb-14 pt-14">
+      className="flex flex-col items-center  m-auto gap-2 sm:gap-6 mb-14   ">
       <SectionTitle title={section} description={content.title}></SectionTitle>
       <div className="flex flex-col w-full ">
-        <div className="flex  gap-12">
+        <div className="flex flex-col lg:flex-row gap-3 md:gap-12">
           <Image
             alt="web-design"
-            className="w-[24vw] h-auto object-cover rounded-xl"
+            className="w-full lg:w-[24vw] h-[20vh] lg:h-auto object-cover rounded-xl"
             src={'/web-design.jpg'}
             width={700}
             height={700}
           />
           <div className="flex flex-col ">
-            <div className="font-serif  italic text-2xl text-nowrap">{content.quote}</div>
-            <div className="text-xl mt-3">{content.description}</div>
+            <div className="font-serif  italic text-lg sm:text-xl">{content.quote}</div>
+            <div className="text-base sm:text-xl mt-1 sm:mt-3">{content.description}</div>
           </div>
         </div>
         <CornerBordersDiv>
-          <div className="flex flex-col items-center w-full gap-7 ">
-            <div className="flex h-[52px] justify-center w-full gap-8">
+          <div className="sm:flex sm:flex-col items-center w-full gap-2 md:gap-7 text-sm">
+            <div className="sm:flex md:h-[52px] justify-normal md:justify-center w-full gap-3 md:gap-8 ">
               <AboutElement
                 title={content.education.title}
                 description={content.education.description}>
@@ -51,7 +54,7 @@ export const About = ({ section, content }: AboutProps) => {
                 />
               </AboutElement>
             </div>
-            <div className="flex h-[52px] justify-center w-full gap-8">
+            <div className="flex md:h-[52px]  justify-normal md:justify-center w-full gap-8">
               <AboutElement
                 title={content.languages.title}
                 description={content.languages.description}>

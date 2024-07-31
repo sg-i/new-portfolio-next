@@ -70,7 +70,7 @@ export default function Navbar({ content }: NavbarProps) {
   }, [activeId]);
 
   return (
-    <div className=" h-14 w-full z-10 bg-white fixed flex justify-between  items-center px-10 py-5 font-semibold ">
+    <div className=" h-14 w-full z-10 bg-white fixed flex justify-between  items-center sm:px-10 p-4 sm:py-5 font-semibold ">
       <div className="w-[100px]">Sgadov.dev</div>
       <ul className="flex gap-3 ">
         <ElementNavbar

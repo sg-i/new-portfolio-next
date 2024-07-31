@@ -23,8 +23,8 @@ export const ElementNavbar = ({ setActiveId, isActive, idSection, text }: Elemen
 
   return (
     <li
-      className={`cursor-pointer border-b-2 border-transparent transition  ${
-        isActive ? 'border-blue-500' : ' hover:border-zinc-200'
+      className={`cursor-pointer border-b-2  transition  ${
+        isActive ? 'border-blue-500' : ' border-transparent hover:border-zinc-200'
       }`}
       onClick={scrollToSection}>
       {text}
