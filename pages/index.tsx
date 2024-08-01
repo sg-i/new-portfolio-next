@@ -33,13 +33,12 @@ const Home = ({ content }: HomeProps): any => {
         <Bio content={content.bio} />
         <div className="p-4 sm:p-8  lg:w-[950px] xl:w-[1100px] m-auto">
           <About section={content.navbar.about} content={content.about} />
+          <Portfolio
+            section={content.navbar.projects}
+            content={content.portfolio}
+            projects={content.projects}
+          />
         </div>
-
-        <Portfolio
-          section={content.navbar.projects}
-          content={content.portfolio}
-          projects={content.projects}
-        />
       </div>
     </>
   );

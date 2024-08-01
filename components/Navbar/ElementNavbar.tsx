@@ -4,10 +4,15 @@ interface ElementNavbarProps {
   text: string;
   idSection: string;
   isActive: boolean;
-  setActiveId: (idSection: string) => void;
+  clickIntoMobileMenu: () => void;
 }
 
-export const ElementNavbar = ({ setActiveId, isActive, idSection, text }: ElementNavbarProps) => {
+export const ElementNavbar = ({
+  clickIntoMobileMenu,
+  isActive,
+  idSection,
+  text,
+}: ElementNavbarProps) => {
   const scrollToSection = () => {
     const section = document.getElementById(idSection);
     if (section) {
@@ -17,7 +22,7 @@ export const ElementNavbar = ({ setActiveId, isActive, idSection, text }: Elemen
         top: rect.top + scrollTop - 56, // Корректируем на 20 пикселей
         behavior: 'smooth',
       });
-      //   setActiveId(idSection);
+      clickIntoMobileMenu();
     }
   };
 

@@ -48,7 +48,7 @@ export default function Bio({ content }: BioProps) {
           </div>
           <ProfilePicture />
         </div>
-        <div className="flex pt-4 sm:pt-10 w-full gap-1 sm:gap-4  justify-center md:justify-normal flex-col sm:flex-row  items-center">
+        <div className="flex pt-4 mt-3 md:m-0 sm:pt-10 w-full gap-1 sm:gap-4  justify-center md:justify-normal flex-col sm:flex-row  items-center">
           <div className="hidden sm:block font-bold">{content.techStack}</div>
           <div className="hidden sm:block text-slate-400">|</div>
           <ul className="flex gap-6 h-16 items-center">

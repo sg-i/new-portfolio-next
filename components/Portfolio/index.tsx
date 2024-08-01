@@ -11,11 +11,11 @@ interface PortfolioProps {
 
 export const Portfolio = ({ section, content, projects }: PortfolioProps) => {
   return (
-    <div id="portfolioSection" className="flex flex-col items-center w-3/5 m-auto gap-16">
+    <div id="portfolioSection" className="flex flex-col items-center  m-auto gap-4 lg:gap-16">
       <SectionTitle title={section} description={content.description}>
         <div className="animate-bounce text-2xl">🧩</div>
       </SectionTitle>
-      <div className="flex flex-col items-center  m-auto gap-24">
+      <div className="flex flex-col items-center  m-auto gap-6 lg:gap-24">
         {projects.map((el, index) => (
           <PortfolioElement
             key={el.title}
