@@ -58,12 +58,38 @@ export const content: localisedContentInterface = {
               ],
             },
             {
+              title: '3D React - Digital Gallery',
+              description:
+                "This website is developed using React and Three.js, featuring a gallery of digital artists' works. In the gallery, you can explore 3D models of artworks and learn about their history. The application provides an interactive and immersive experience in the world of digital art.",
+                stack: ['React', 'Three.js' , 'SCSS'],
+              codeLink: 'https://github.com/sg-i/3d-react',
+              demoLink: 'https://3d-react-lyart.vercel.app/',
+              images: [
+                {
+                  original: '/portfolio/3d-react/1.png',
+                  thumbnail: '/portfolio/3d-react/1.png',
+                },
+                {
+                  original: '/portfolio/3d-react/2.png',
+                  thumbnail: '/portfolio/3d-react/2.png',
+                },
+                {
+                  original: '/portfolio/3d-react/3.png',
+                  thumbnail: '/portfolio/3d-react/3.png',
+                },
+                {
+                  original: '/portfolio/3d-react/4.png',
+                  thumbnail: '/portfolio/3d-react/4.png',
+                },
+              ],
+            },
+            {
               title: 'Spotify Layout - Music Player',
               description:
                 'This project is a clone of the music streaming service Spotify, created for practicing layout and interface development. The application is built using Vue and Pinia for state management. A music player for playback has been implemented.',
               stack: ['Vue', 'Pinia', 'Tailwind','TypeScript' ],
-              codeLink: 'https://github.com/sg-i',
-              demoLink: 'https://github.com/sg-i',
+              codeLink: 'https://github.com/sg-i/spotify-vue',
+              demoLink: 'https://spotify-vue-one.vercel.app/',
               images: [
                 {
                   original: '/portfolio/spotify/1.png',
@@ -82,29 +108,8 @@ export const content: localisedContentInterface = {
                   thumbnail: '/portfolio/spotify/4.png',
                 },
               ],
-            },
-            {
-              title: '2Netflix Clone - Online Сinema 🎬',
-              description:
-                'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sint dolorum molestias reprehenderit perferendis unde illo consequuntur et amet! Fugit, laboriosam earum! Vel quam dolores voluptate tempora pariatur, sit maxime.',
-              stack: ['React', 'Next', 'SCSS'],
-              codeLink: 'https://github.com/sg-i',
-              demoLink: 'https://github.com/sg-i',
-              images: [
-                {
-                  original: '/portfolio/netflix/1.png',
-                  thumbnail: '/portfolio/netflix/1.png',
-                },
-                {
-                  original: '/portfolio/netflix/2.png',
-                  thumbnail: '/portfolio/netflix/2.png',
-                },
-                {
-                  original: '/portfolio/netflix/3.png',
-                  thumbnail: '/portfolio/netflix/3.png',
-                },
-              ],
-            },
+            }
+            
           ]
     },
     ru: {
@@ -165,12 +170,38 @@ export const content: localisedContentInterface = {
               ],
             },
             {
+              title: '3D React - Digital Галерея',
+              description:
+                'Данный сайт разработан на React с использованием Three.js, представляет собой галерею работ цифровых художников. В галерее можно осматривать 3D модели произведений искусства и знакомиться с их историей. Приложение обеспечивает интерактивное и захватывающее погружение в мир цифрового искусства.',
+              stack: ['React','Three.js' , 'SCSS'],
+              codeLink: 'https://github.com/sg-i/3d-react',
+              demoLink: 'https://3d-react-lyart.vercel.app/',
+              images: [
+                {
+                  original: '/portfolio/3d-react/1.png',
+                  thumbnail: '/portfolio/3d-react/1.png',
+                },
+                {
+                  original: '/portfolio/3d-react/2.png',
+                  thumbnail: '/portfolio/3d-react/2.png',
+                },
+                {
+                  original: '/portfolio/3d-react/3.png',
+                  thumbnail: '/portfolio/3d-react/3.png',
+                },
+                {
+                  original: '/portfolio/3d-react/4.png',
+                  thumbnail: '/portfolio/3d-react/4.png',
+                }
+              ],
+            },
+            {
               title: 'Вёрстка Spotify - Музыкальный Плеер',
               description:
                 'Этот проект представляет собой клон музыкального стримингового сервиса Spotify, созданный для практики вёрстки и разработки интерфейсов. Приложение написано с использованием Vue и Pinia для управления состоянием. Также реализован плеер для воспроизведения музыки.',
               stack: ['Vue', 'Pinia', 'TypeScript' ],
-              codeLink: 'https://github.com/sg-i',
-              demoLink: 'https://github.com/sg-i/spotify-vue',
+              codeLink: 'https://github.com/sg-i/spotify-vue',
+              demoLink: 'https://spotify-vue-one.vercel.app/',
               images: [
                 {
                   original: '/portfolio/spotify/1.png',
@@ -189,29 +220,7 @@ export const content: localisedContentInterface = {
                   thumbnail: '/portfolio/spotify/4.png',
                 },
               ],
-            },
-            {
-              title: '2Netflix Clone - Online Сinema 🎬',
-              description:
-                'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sint dolorum molestias reprehenderit perferendis unde illo consequuntur et amet! Fugit, laboriosam earum! Vel quam dolores voluptate tempora pariatur, sit maxime.',
-              stack: ['React', 'Next', 'SCSS'],
-              codeLink: 'https://github.com/sg-i',
-              demoLink: 'https://github.com/sg-i',
-              images: [
-                {
-                  original: '/portfolio/netflix/1.png',
-                  thumbnail: '/portfolio/netflix/1.png',
-                },
-                {
-                  original: '/portfolio/netflix/2.png',
-                  thumbnail: '/portfolio/netflix/2.png',
-                },
-                {
-                  original: '/portfolio/netflix/3.png',
-                  thumbnail: '/portfolio/netflix/3.png',
-                },
-              ],
-            },
+            }
           ]
     },
 
