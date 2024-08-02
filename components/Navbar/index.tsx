@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
 import { ElementNavbar } from './ElementNavbar';
-import ProgressBar from 'react-scroll-progress-bar';
+// import ProgressBar from 'react-scroll-progress-bar';
 interface NavbarProps {
   content: contentNavbarInterface;
 }
