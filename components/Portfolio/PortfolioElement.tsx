@@ -4,6 +4,10 @@ import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+interface PortfolioElementImageProps {
+  original: string;
+  thumbnail: string;
+}
 interface PortfolioElementProps {
   codeButton: string;
   title: string;
@@ -13,12 +17,7 @@ interface PortfolioElementProps {
   codeLink: string;
   demoLink: string;
   leftImage: boolean;
-  images: [
-    {
-      original: string;
-      thumbnail: string;
-    },
-  ];
+  images: PortfolioElementImageProps[];
 }
 
 export const PortfolioElement = ({
