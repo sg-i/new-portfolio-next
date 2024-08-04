@@ -31,6 +31,11 @@ const Home = ({ content }: HomeProps): any => {
     <>
       <Head>
         <title>Sgadov | Frontend Developer</title>
+        <meta
+          name="description"
+          content="Привет! Меня зовут Иван Сгадов, я ответственный и трудолюбивый frontend-разработчик."
+        />
+        <meta name="author" content="Иван Сгадов" />
       </Head>
       <div className="h-full w-full items-center ">
         <Navbar content={content.navbar} />
