@@ -24,7 +24,7 @@ export const About = ({ section, content }: AboutProps) => {
             height={700}
           />
           <div className="flex flex-col ">
-            <div className="font-serif  italic text-lg sm:text-xl">{content.quote}</div>
+            <div className="font-serif  italic text-lg sm:text-2xl">{content.quote}</div>
             <div className="text-base sm:text-xl mt-1 sm:mt-3">{content.description}</div>
           </div>
         </div>

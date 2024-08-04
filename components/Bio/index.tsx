@@ -1,25 +1,53 @@
 import Image from 'next/image';
 import ProfilePicture from './ProfilePicture';
 import { contentBioInterface } from '@/types';
+import { TechStackElement } from './TechStackElement';
 interface BioProps {
   content: contentBioInterface;
 }
-
-const socials = [
-  {
-    id: 1,
-    size: 28,
-    src: '/icons/socials/linkedin.svg',
-    alt: 'linkedin link',
-  },
-  {
-    id: 2,
-    size: 25,
-    src: '/icons/socials/github-mark.svg',
-    alt: 'github link',
-  },
-];
 export default function Bio({ content }: BioProps) {
+  const socials = [
+    {
+      id: 1,
+      size: 28,
+      src: '/icons/socials/linkedin.svg',
+      alt: 'linkedin link',
+    },
+    {
+      id: 2,
+      size: 25,
+      src: '/icons/socials/github-mark.svg',
+      alt: 'github link',
+    },
+  ];
+  const techStack = [
+    {
+      size: 35,
+      src: '/icons/tech-stack/vue.svg',
+      text: 'Vue',
+    },
+    {
+      size: 34,
+      src: '/icons/tech-stack/next-js.svg',
+      text: 'Next',
+    },
+    {
+      size: 40,
+      src: '/icons/tech-stack/tailwind.svg',
+      text: 'Tailwind',
+    },
+
+    {
+      size: 40,
+      src: '/icons/tech-stack/node-js.svg',
+      text: 'NodeJS',
+    },
+    // {
+    //   size: 37,
+    //   src: '/icons/tech-stack/material-ui.svg',
+    //   text: 'MaterialUI',
+    // },
+  ];
   return (
     <div id="bioSection" className="justify-center  pt-10 md:pt-14 flex flex-col  w-full h-[100vh]">
       <div className="flex flex-col  items-center m-auto">
@@ -48,52 +76,23 @@ export default function Bio({ content }: BioProps) {
           </div>
           <ProfilePicture />
         </div>
-        <div className="flex pt-4 mt-3 md:m-0 sm:pt-10 w-full gap-1 sm:gap-4  justify-center md:justify-normal flex-col sm:flex-row  items-center">
+        <div className="flex pt-4 mt-3 md:m-0 sm:pt-10 w-full gap-1 sm:gap-4  justify-center md:justify-start flex-col sm:flex-row  items-center">
           <div className="hidden sm:block font-bold">{content.techStack}</div>
           <div className="hidden sm:block text-slate-400">|</div>
-          <ul className="flex gap-6 h-16 items-center">
-            <li className="flex h-full flex-col justify-between items-center">
-              <div className="flex  h-full">
-                <img
-                  className="animate-spin-slow"
-                  width={40}
-                  height={40}
-                  src={'/icons/tech-stack/react-icon.svg'}
-                  alt="react icon"
-                />
-              </div>
-              <div>React</div>
-            </li>
-            <li className="flex h-full flex-col justify-between items-center">
-              <div className="flex  h-full">
-                <img width={35} height={35} src={'/icons/tech-stack/vue.svg'} alt="react icon" />
-              </div>
-              <div>Vue</div>
-            </li>
-            <li className="flex h-full flex-col justify-between items-center">
-              <div className="flex  h-full">
-                <img
-                  width={40}
-                  height={40}
-                  src={'/icons/tech-stack/tailwind.svg'}
-                  alt="react icon"
-                />
-              </div>
-              <div>Tailwind</div>
-            </li>
-            <li className="flex h-full flex-col justify-between items-center">
-              <div className="flex  h-full">
-                <img
-                  width={34}
-                  height={34}
-                  src={'/icons/tech-stack/next-js.svg'}
-                  alt="react icon"
-                />
-              </div>
-              <div>Next</div>
-            </li>
+          <ul className="flex gap-5 h-16 items-center flex-nowrap overflow-hidden justify-center sm:justify-start px-8 sm:px-0 ">
+            <TechStackElement text="React" size={40} src="/icons/tech-stack/react-icon.svg">
+              <img
+                className="animate-spin-slow"
+                width={40}
+                height={40}
+                src={'/icons/tech-stack/react-icon.svg'}
+                alt="react icon"
+              />
+            </TechStackElement>
+            {techStack.map((el) => (
+              <TechStackElement key={el.text} size={el.size} src={el.src} text={el.text} />
+            ))}
           </ul>
-          {/* <div className="visible sm:hidden font-bold">{content.techStack}</div> */}
         </div>
       </div>
     </div>
