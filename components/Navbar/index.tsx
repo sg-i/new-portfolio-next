@@ -92,12 +92,12 @@ export default function Navbar({ content }: NavbarProps) {
       <div
         className={` w-full z-10 
           ${scrollWidth && 'shadow-md'} 
-          ${scrollWidth > 0 ? 'bg-white' : 'bg-transparent'} 
+          ${scrollWidth > 0 ? 'bg-zinc-100' : 'bg-transparent'} 
            fixed flex justify-between transition-all duration-500 items-center sm:px-10 h-14 p-4 sm:py-5 font-semibold `}>
         <div
           className={`${
             !isMobileMenuOpen && 'hidden'
-          } fixed sm:hidden -z-10 top-0 left-0 bg-white flex flex-col h-full w-full`}>
+          } fixed sm:hidden -z-10 top-0 left-0 bg-zinc-100 flex flex-col h-full w-full`}>
           <ul className="w-fit m-auto text-center flex flex-col gap-2 text-4xl">
             <ElementNavbar
               clickIntoMobileMenu={clickIntoMobileMenu}
