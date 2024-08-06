@@ -2,6 +2,8 @@ import Image from 'next/image';
 import ProfilePicture from './ProfilePicture';
 import { contentBioInterface } from '@/types';
 import { TechStackElement } from './TechStackElement';
+import ReactPlayer from 'react-player';
+import { useEffect, useState } from 'react';
 interface BioProps {
   content: contentBioInterface;
 }
@@ -48,15 +50,28 @@ export default function Bio({ content }: BioProps) {
     //   text: 'MaterialUI',
     // },
   ];
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <div id="bioSection" className="justify-center  pt-10 md:pt-14 flex flex-col  w-full h-[100vh]">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        autoPlay
+        muted
+        loop
+        src="/video/abstract2.mp4"></video>
+
       <div className="flex flex-col  items-center m-auto">
         {/* <div className="flex flex-col gap-14 md:flex-row items-center"> */}
         <div className="gap-0 md:gap-2 lg:gap-14 flex flex-wrap-reverse md:flex-nowrap justify-center items-center">
           {/* <div className="flex flex-col w-[480px] gap-4"> */}
           <div className="flex flex-col w-[330px] sm:w-[500px] md:w-[370px] lg:w-[460px]  text-center md:text-left gap-4">
             <div className="text-3xl sm:text-5xl font-bold">{content.title}</div>
-            <div className="text-base sm:text-base text-gray-500 ">{content.description}</div>
+            <div className="text-base sm:text-base text-gray-800 ">{content.description}</div>
             <div className="sm:pt-2">
               <ul className="flex items-center justify-center md:justify-normal gap-3">
                 {socials.map((social) => (
