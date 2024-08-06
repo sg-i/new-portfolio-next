@@ -8,7 +8,8 @@ import { PortfolioElement } from '@/components/Portfolio/PortfolioElement';
 import { Portfolio } from '@/components/Portfolio';
 import { About } from '@/components/About';
 import Head from 'next/head';
-
+import { Contact } from '@/components/Contact';
+import AnimatedCursor from 'react-animated-cursor';
 export function getServerSideProps(context: NextPageContext) {
   let locale: keyof localisedContentInterface =
     (context.locale as keyof localisedContentInterface) || 'en';
@@ -47,7 +48,37 @@ const Home = ({ content }: HomeProps): any => {
             content={content.portfolio}
             projects={content.projects}
           />
+          <Contact section={content.navbar.contact} content={content.contact} />
         </div>
+
+        <AnimatedCursor
+          innerSize={6}
+          outerSize={35}
+          innerScale={1}
+          outerScale={1.3}
+          outerAlpha={0}
+          innerStyle={{
+            backgroundColor: 'black',
+          }}
+          outerStyle={{
+            border: '3px solid black',
+          }}
+          trailingSpeed={5}
+          clickables={[
+            'a',
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.link',
+            '.element-navbar',
+          ]}
+        />
       </div>
     </>
   );

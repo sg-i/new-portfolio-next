@@ -34,6 +34,9 @@ export const content: localisedContentInterface = {
             codeButton:'Code',
             liveDemoButton: 'Live Demo'
         },
+        contact:{
+          title: "Time to get acquainted"
+        },
         projects:[
             {
               title: 'Netflix Clone - Online Сinema',
@@ -145,6 +148,9 @@ export const content: localisedContentInterface = {
             description: "Мои Работы: Творчество и Код в Действии",
             codeButton: 'Код',
             liveDemoButton: 'Демо'
+        },
+        contact:{
+          title: "Время познакомиться"
         },
         projects:[
             {

@@ -55,7 +55,7 @@ export default function Navbar({ content }: NavbarProps) {
 
   // Функция для обновления активного элемента при скролле
   const handleScroll = useCallback(() => {
-    const sections = ['bioSection', 'aboutSection', 'portfolioSection']; // Ваши секции
+    const sections = ['bioSection', 'aboutSection', 'portfolioSection', 'contactSection']; // Ваши секции
     const scrollPosition = window.scrollY || window.pageYOffset;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercentage = (scrollPosition / docHeight) * 100;
@@ -116,11 +116,17 @@ export default function Navbar({ content }: NavbarProps) {
               text={content.projects}
               isActive={activeId === 'portfolioSection'}
             />
+            <ElementNavbar
+              clickIntoMobileMenu={clickIntoMobileMenu}
+              idSection="contactSection"
+              text={content.contact}
+              isActive={activeId === 'contactSection'}
+            />
           </ul>
           <div className="flex items-center gap-2 text-xl justify-center mb-5">
             <Link
               onClick={clickIntoMobileMenu}
-              className={`cursor-pointer border-b-2 transition border-transparent ${
+              className={` border-b-2 transition border-transparent ${
                 locale == 'ru' ? 'font-bold' : 'text-gray-400 hover:text-gray-600'
               }`}
               href={router.asPath}
@@ -129,7 +135,7 @@ export default function Navbar({ content }: NavbarProps) {
             </Link>
             <Link
               onClick={clickIntoMobileMenu}
-              className={`cursor-pointer  border-b-2 transition border-transparent ${
+              className={` border-b-2 transition border-transparent ${
                 locale == 'en' ? 'font-bold' : 'text-gray-400 hover:text-gray-600'
               }`}
               href={router.asPath}
@@ -157,6 +163,12 @@ export default function Navbar({ content }: NavbarProps) {
             idSection="portfolioSection"
             text={content.projects}
             isActive={activeId === 'portfolioSection'}
+          />
+          <ElementNavbar
+            clickIntoMobileMenu={clickIntoMobileMenu}
+            idSection="contactSection"
+            text={content.contact}
+            isActive={activeId === 'contactSection'}
           />
           {/* <ElementNavbar text={content.contact} /> */}
         </ul>
@@ -199,7 +211,7 @@ export default function Navbar({ content }: NavbarProps) {
             </svg>
           </div>
           <Link
-            className={`cursor-pointer hidden sm:block border-b-2 transition border-transparent ${
+            className={` hidden sm:block border-b-2 transition border-transparent ${
               locale == 'ru' ? 'font-bold' : 'text-gray-400 hover:text-gray-600'
             }`}
             href={router.asPath}
@@ -207,7 +219,7 @@ export default function Navbar({ content }: NavbarProps) {
             RU
           </Link>
           <Link
-            className={`cursor-pointer hidden sm:block border-b-2 transition border-transparent ${
+            className={` hidden sm:block border-b-2 transition border-transparent ${
               locale == 'en' ? 'font-bold' : 'text-gray-400 hover:text-gray-600'
             }`}
             href={router.asPath}

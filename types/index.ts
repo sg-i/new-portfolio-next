@@ -9,6 +9,7 @@ export interface contentInterface {
   bio: contentBioInterface,
   about: contentAboutInterface,
   portfolio: contentPortfolioInterface,
+  contact: contentContactInterface,
   projects: projectInterface[]
 }
 
@@ -43,6 +44,10 @@ export interface contentPortfolioInterface{
   description: string,
   codeButton: string,
   liveDemoButton: string
+}
+
+export interface contentContactInterface{
+  title: string,
 }
 
 interface webImageDataInterface{
