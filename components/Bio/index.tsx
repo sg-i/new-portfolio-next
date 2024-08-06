@@ -2,7 +2,6 @@ import Image from 'next/image';
 import ProfilePicture from './ProfilePicture';
 import { contentBioInterface } from '@/types';
 import { TechStackElement } from './TechStackElement';
-import ReactPlayer from 'react-player';
 import { useEffect, useState } from 'react';
 interface BioProps {
   content: contentBioInterface;
