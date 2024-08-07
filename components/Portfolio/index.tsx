@@ -13,11 +13,13 @@ export const Portfolio = ({ section, content, projects }: PortfolioProps) => {
   return (
     <div
       id="portfolioSection"
-      className="flex flex-col items-center  m-auto gap-4 lg:gap-16 mb-14 ">
-      <SectionTitle title={section} description={content.description}>
-        <div className="animate-bounce text-2xl">🧩</div>
-      </SectionTitle>
-      <div className="flex flex-col items-center  m-auto gap-6 lg:gap-24">
+      className="bg-white px-0 md:p-5 shadow-lg rounded-xl flex flex-col items-center  m-auto mb-6 md:mb-14 ">
+      <div className="w-full  p-5 md:p-0">
+        <SectionTitle title={section} description={content.description}>
+          <div className="animate-bounce text-2xl">🧩</div>
+        </SectionTitle>
+      </div>
+      <div className="flex divide-y flex-col items-center  m-auto gap-6 lg:gap-12 ">
         {projects.map((el, index) => (
           <PortfolioElement
             key={el.title}

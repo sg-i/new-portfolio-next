@@ -69,9 +69,11 @@ export default function Bio({ content }: BioProps) {
         {/* <div className="flex flex-col gap-14 md:flex-row items-center"> */}
         <div className="gap-0 md:gap-2 lg:gap-14 flex flex-wrap-reverse md:flex-nowrap justify-center items-center">
           {/* <div className="flex flex-col w-[480px] gap-4"> */}
-          <div className="flex flex-col w-[330px] sm:w-[500px] md:w-[370px] lg:w-[460px]  text-center md:text-left gap-4">
+          <div className="flex flex-col  w-[330px] sm:w-[500px] md:w-[370px] lg:w-[460px]  text-center md:text-left gap-4">
             <div className="text-3xl sm:text-5xl font-bold">{content.title}</div>
-            <div className="text-base sm:text-base text-gray-800 ">{content.description}</div>
+            <div className="text-base sm:text-base text-gray-800 text-wrap">
+              {content.description}
+            </div>
             <div className="sm:pt-2">
               <ul className="flex items-center justify-center md:justify-normal gap-3">
                 {socials.map((social) => (
@@ -94,7 +96,7 @@ export default function Bio({ content }: BioProps) {
         <div className="flex pt-4 mt-3 md:m-0 sm:pt-10 w-full gap-1 sm:gap-4  justify-center md:justify-start flex-col sm:flex-row  items-center">
           <div className="hidden sm:block font-bold">{content.techStack}</div>
           <div className="hidden sm:block text-slate-400">|</div>
-          <ul className="flex gap-5 h-16 items-center flex-nowrap overflow-hidden justify-center sm:justify-start px-8 sm:px-0 ">
+          <ul className="flex gap-5 h-16 items-center flex-wrap overflow-hidden justify-center sm:justify-start px-8 sm:px-0 ">
             <TechStackElement text="React" size={40} src="/icons/tech-stack/react-icon.svg">
               <img
                 className="animate-spin-slow"

@@ -12,7 +12,7 @@ export const About = ({ section, content }: AboutProps) => {
     <div
       id="aboutSection"
       // className="flex flex-col items-center w-full xl:w-3/5 m-auto gap-6 mb-14 pt-14">
-      className="flex flex-col items-center  m-auto gap-2 sm:gap-6 mb-14   ">
+      className="bg-white p-5 shadow-lg rounded-xl  flex flex-col items-center  m-auto gap-2 sm:gap-6 mb-6 md:mb-14 ">
       <SectionTitle title={section} description={content.title}></SectionTitle>
       <div className="flex flex-col w-full ">
         <div className="flex flex-col lg:flex-row gap-3 md:gap-12">

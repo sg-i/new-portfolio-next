@@ -92,7 +92,7 @@ export default function Navbar({ content }: NavbarProps) {
       <div
         className={` w-full z-10 
           ${scrollWidth && 'shadow-md'} 
-          ${scrollWidth > 0 ? 'bg-zinc-100' : 'bg-transparent'} 
+          ${scrollWidth > 0 ? 'bg-white' : 'bg-transparent'} 
            fixed flex justify-between transition-all duration-500 items-center sm:px-10 h-14 p-4 sm:py-5 font-semibold `}>
         <div
           className={`${

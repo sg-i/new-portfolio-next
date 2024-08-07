@@ -28,7 +28,7 @@ export const ElementNavbar = ({
 
   return (
     <li
-      className={`element-navbar  border-b-2  transition  ${
+      className={`cursor-pointer element-navbar  border-b-2  transition  ${
         isActive ? 'border-blue-500' : ' border-transparent hover:border-zinc-200'
       }`}
       onClick={scrollToSection}>
