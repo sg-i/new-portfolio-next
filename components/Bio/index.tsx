@@ -58,6 +58,7 @@ export default function Bio({ content }: BioProps) {
   return (
     <div id="bioSection" className="justify-center  pt-10 md:pt-14 flex flex-col  w-full h-[100vh]">
       <video
+        poster="/video/abstract2.png"
         className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
         autoPlay
         muted
