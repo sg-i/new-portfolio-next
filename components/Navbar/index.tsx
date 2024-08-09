@@ -83,9 +83,6 @@ export default function Navbar({ content }: NavbarProps) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  useEffect(() => {
-    console.log(activeId);
-  }, [activeId]);
 
   return (
     <>
