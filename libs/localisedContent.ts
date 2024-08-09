@@ -8,8 +8,8 @@ export const content: localisedContentInterface = {
             contact: "Contact",
         },
         bio:{
-            title: "Frontend React Developer",
-            description: "Hello! I'm Ivan Sgadov, a responsible and hardworking frontend developer.",
+            title: "Web Developer",
+            description: "Hi! My name is Ivan Sgadov, I am a responsible and hardworking web application developer.",
             techStack: "Tech Stack"
         },
         about:{
@@ -123,8 +123,8 @@ export const content: localisedContentInterface = {
             contact: "Контакты",
         },
         bio:{
-            title: "Frontend React Developer",
-            description: "Привет! Меня зовут Иван Сгадов, я ответственный и трудолюбивый frontend-разработчик.",
+            title: "Web Developer",
+            description: "Привет! Меня зовут Иван Сгадов, я ответственный и трудолюбивый разработчик web приложений.",
             techStack: "Техн. Стек"
         },
         about:{

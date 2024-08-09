@@ -8,14 +8,14 @@ interface BioProps {
 }
 export default function Bio({ content }: BioProps) {
   const socials = [
+    // {
+    //   id: 1,
+    //   size: 28,
+    //   src: '/icons/socials/linkedin.svg',
+    //   alt: 'linkedin link',
+    // },
     {
       id: 1,
-      size: 28,
-      src: '/icons/socials/linkedin.svg',
-      alt: 'linkedin link',
-    },
-    {
-      id: 2,
       size: 25,
       src: '/icons/socials/github-mark.svg',
       alt: 'github link',
@@ -23,15 +23,16 @@ export default function Bio({ content }: BioProps) {
   ];
   const techStack = [
     {
-      size: 35,
-      src: '/icons/tech-stack/vue.svg',
-      text: 'Vue',
-    },
-    {
       size: 34,
       src: '/icons/tech-stack/next-js.svg',
       text: 'Next',
     },
+    {
+      size: 35,
+      src: '/icons/tech-stack/vue.svg',
+      text: 'Vue',
+    },
+
     {
       size: 40,
       src: '/icons/tech-stack/tailwind.svg',
@@ -88,6 +89,15 @@ export default function Bio({ content }: BioProps) {
                     </a>
                   </li>
                 ))}
+                <li className="">
+                  <a href="https://github.com/sg-i" target="_blank" rel="noopener noreferrer">
+                    <div
+                      style={{ background: '#24292f', opacity: 0.91 }}
+                      className="w-[25px] h-[25px] flex items-center justify-center text-white px-1 rounded-full">
+                      hh
+                    </div>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
