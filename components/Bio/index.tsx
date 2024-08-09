@@ -90,9 +90,12 @@ export default function Bio({ content }: BioProps) {
                   </li>
                 ))}
                 <li className="">
-                  <a href="https://github.com/sg-i" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://hh.ru/resume/39aebbfcff0d926e850039ed1f753057347144"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     <div
-                      style={{ background: '#24292f', opacity: 0.91 }}
+                      style={{ background: '#24292f', opacity: 0.89 }}
                       className="w-[25px] h-[25px] flex items-center justify-center text-white px-1 rounded-full">
                       hh
                     </div>
