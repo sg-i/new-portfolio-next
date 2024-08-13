@@ -15,7 +15,7 @@ export const content: localisedContentInterface = {
         about:{
             title: "Here is some information about me",
             quote: '"Simplicity is the soul of efficiency." – Austin Freeman',
-            description: " I am a highly responsible frontend developer with a strong passion for creating intuitive and dynamic user interfaces. My attention to detail and commitment to delivering high-quality work ensure that every project meets and exceeds expectations. I thrive in collaborative environments and am always eager to learn and grow my skills.",
+            description: "I am a highly responsible fullstack developer with a strong passion for creating both intuitive user interfaces and reliable backend solutions. My attention to detail and commitment to quality ensure that every project meets and exceeds expectations. I excel at teamwork and am always eager to learn and improve my skills.",
             education:{
                 title: "Higher Education",
                 description: "Bachelor's degree in Computer Science"
@@ -130,7 +130,7 @@ export const content: localisedContentInterface = {
         about:{
             title: "Немного информации о себе",
             quote: '«Простота — душа эффективности». – Остин Фриман',
-            description: "Я высокоответственный frontend-разработчик с сильной страстью к созданию интуитивно понятных и динамичных пользовательских интерфейсов. Мое внимание к деталям и стремление к качеству гарантируют, что каждый проект соответствует и превышает ожидания. Я прекрасно работаю в команде и всегда стремлюсь учиться и развивать свои навыки.",
+            description: "Я высокоответственный fullstack-разработчик с сильной страстью к созданию как интуитивно понятных пользовательских интерфейсов, так и надежных серверных решений. Мое внимание к деталям и стремление к качеству гарантируют, что каждый проект соответствует и превышает ожидания. Я отлично работаю в команде и всегда стремлюсь учиться и развивать свои навыки.",
             education:{
                 title: "Высшее образование",
                 description: "Степень бакалавра (Прикладная информатика)"
