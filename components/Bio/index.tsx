@@ -8,15 +8,17 @@ interface BioProps {
 }
 export default function Bio({ content }: BioProps) {
   const socials = [
-    // {
-    //   id: 1,
-    //   size: 28,
-    //   src: '/icons/socials/linkedin.svg',
-    //   alt: 'linkedin link',
-    // },
     {
       id: 1,
+      size: 28,
+      link: 'https://github.com/sg-i',
+      src: '/icons/socials/linkedin.svg',
+      alt: 'linkedin link',
+    },
+    {
+      id: 2,
       size: 25,
+      link: 'https://www.linkedin.com/in/sgadov',
       src: '/icons/socials/github-mark.svg',
       alt: 'github link',
     },
@@ -79,7 +81,7 @@ export default function Bio({ content }: BioProps) {
               <ul className="flex items-center justify-center md:justify-normal gap-3">
                 {socials.map((social) => (
                   <li key={social.id}>
-                    <a href="https://github.com/sg-i" target="_blank" rel="noopener noreferrer">
+                    <a href={social.link} target="_blank" rel="noopener noreferrer">
                       <Image
                         width={social.size}
                         height={social.size}
