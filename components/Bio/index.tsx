@@ -10,14 +10,14 @@ export default function Bio({ content }: BioProps) {
   const socials = [
     {
       id: 1,
-      size: 28,
+      size: 25,
       link: 'https://github.com/sg-i',
       src: '/icons/socials/github-mark.svg',
       alt: 'github link',
     },
     {
       id: 2,
-      size: 25,
+      size: 28,
       link: 'https://www.linkedin.com/in/sgadov',
       src: '/icons/socials/linkedin.svg',
       alt: 'linkedin link',
