@@ -31,10 +31,10 @@ const Home = ({ content }: HomeProps): any => {
   return (
     <>
       <Head>
-        <title>Sgadov | Frontend Developer</title>
+        <title>Sgadov | Fullstack Developer</title>
         <meta
           name="description"
-          content="Привет! Меня зовут Иван Сгадов, я ответственный и трудолюбивый frontend-разработчик."
+          content="Привет! Меня зовут Иван Сгадов, я ответственный и трудолюбивый fullstack-разработчик."
         />
         <meta name="author" content="Иван Сгадов" />
       </Head>
