@@ -93,7 +93,7 @@ export default function Bio({ content }: BioProps) {
                 ))}
                 <li className="">
                   <a
-                    href="https://hh.ru/resume/39aebbfcff0d926e850039ed1f753057347144"
+                    href="https://hh.ru/resume/b447f34bff0d9aa7ba0039ed1f7559586d5839"
                     target="_blank"
                     rel="noopener noreferrer">
                     <div
