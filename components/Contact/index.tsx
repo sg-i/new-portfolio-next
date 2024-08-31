@@ -29,7 +29,7 @@ export const Contact = ({ section, content }: ContactProps) => {
           <li className="grid grid-cols-3  gap-5 items-center">
             <div className=" font-bold">Email:</div>
             <div className="font-mono text-center col-span-2 p-2 shadow-md rounded-lg bg-white border-black border-[2px]">
-              i.sgadov@yandex.ru
+              sgadov.dev@gmail.com
             </div>
           </li>
         </ul>
